@@ -75,7 +75,7 @@ export const databaseTechnologies = [
   },
   {
     name: 'MySQL',
-    logoUrl: ' https://i.postimg.cc/Dz7pnJps/mysqlworkbench-93532.png',
+    logoUrl: 'https://i.postimg.cc/Dz7pnJps/mysqlworkbench-93532.png',
   },
 ]
 
