@@ -24,7 +24,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.2 }}
-                className="absolute top-0 max-sm:left-2 sm:left-2 lg:-left-20 -left-16  text-xl sm:text-2xl text-gray-50 mb-16 select-none"
+                className="absolute top-0 max-sm:-left-3 sm:left-2 lg:-left-20 -left-16  text-xl sm:text-2xl text-gray-50 mb-16 select-none"
               >
                 Hey there 👋,
               </motion.span>
@@ -38,7 +38,7 @@ const Hero = () => {
             <div>
               <TextGenerateEffect
                 words="Full Stack Web Developer"
-                className="lg:text-6xl max-sm:text-3xl sm:text-4xl text-start md:text-3xl text-[45px]"
+                className="lg:text-6xl max-sm:text-3xl max-sm:me-5 sm:text-4xl text-start md:text-3xl text-[45px]"
               />
             </div>
 

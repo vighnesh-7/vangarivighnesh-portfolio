@@ -7,6 +7,7 @@ import { useState } from 'react'
 import { HoverBorderGradient } from './HeroButton'
 import { IconCopy, IconCopyCheck } from '@tabler/icons-react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 export const BentoGrid = ({
   className,
@@ -77,7 +78,7 @@ export const BentoGridItem = ({
           'linear-gradient(73deg, rgba(22,53,125,1) 0%, rgba(11,22,99,1) 36%, rgba(5,14,80,1) 80%)',
       }}
     >
-      <div className={`h-full`}>
+      <div className={`h-full w-full`}>
         <div
           className={`absolute right-0 h-full -bottom-48 ${
             id === 5 && 'w-full opacity-85'
@@ -92,26 +93,27 @@ export const BentoGridItem = ({
         >
           {img && id !== 1 && (
             <img
+              loading="lazy"
               src={img}
               alt={img}
               className={cn(imgClassName, 'object-cover object-center')}
             />
           )}
-          {id == 1 && (
+          {id == 1 && img && (
             <div className="grid grid-cols-3 gap-3 group-hover/bento:translate-x-2 transition duration-200 relative">
-              <div className="">
-                <img
+              <div className=" relative">
+                <Image
                   src={img}
                   alt={img}
-                  height={100}
-                  width={100}
+                  height={600}
+                  width={500}
                   className={cn(
                     imgClassName,
-                    'object-cover object-center col-span-1'
+                    'object-cover object-center col-span-1 ss:py-20 lg:p-0  md:absolute lg:h-80 lg:w-80 -top-10 lg:-top-36 lg:left-0 '
                   )}
                 />
               </div>
-              <div className="font-semibold m-4 p-2 text-sm lg:text-lg w-full z-10 drop-shadow-[0_2.9px_1.5px_rgba(0,0,0,1)] col-span-2">
+              <div className=" max-md:m-0 max-sm:mt-10 max-sm:ps-5 font-semibold m-5 p-2 sm:px-10 md:px-5 lg:px-10 text-sm md:text-lg w-full z-10 drop-shadow-[0_2.9px_1.5px_rgba(0,0,0,1)] col-span-2">
                 {title}
               </div>
             </div>
@@ -130,7 +132,7 @@ export const BentoGridItem = ({
             titleClassName,
             `group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-20 flex flex-col p-6 ${
               id === 2 && 'pt-0 pb-20'
-            }`
+            } ${id === 5 && 'justify-center'}`
           )}
         >
           <div className="font-serif md:max-w-32 text-sm z-10 lg:text-base md:text-xs">
@@ -138,7 +140,7 @@ export const BentoGridItem = ({
           </div>
           <div
             className={`font-semibold text-sm lg:text-lg w-full z-10 ${
-              id == 5 && 'text-center mx-auto'
+              id === 5 && 'text-center max-sm:ms-10 max-sm:text-nowrap mx-auto'
             } ${id == 2 && 'text-start my-0'}`}
           >
             <p

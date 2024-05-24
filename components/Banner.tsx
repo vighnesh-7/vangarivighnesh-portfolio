@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 export default function Component() {
   return (
     <div
-      className="absolute max-md:right-0 md:right-16 lg:right-20 max-sm:top-0 sm:top-0 md:top-32  top-1/2 md:-translate-y-1/2 z-40"
+      className="absolute max-md:right-0 md:right-16 lg:right-20 max-sm:-top-4 sm:top-0 md:top-32  top-1/2 md:-translate-y-1/2 z-40"
       // whileHover={{ scale: 1.05 }} // Scale up on hover
       // transition={{ duration: 0.3, ease: "easeInOut" }}
     >

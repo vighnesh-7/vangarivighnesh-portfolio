@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import KeyboardAnimated from '../assets/projects/images/keyboardAnimated.svg'
+import KeyboardAnimated from '../assets/images/keyboardAnimated.svg'
 import MagneticEffect from './MagneticEffect'
 
 const SkillCategory = ({

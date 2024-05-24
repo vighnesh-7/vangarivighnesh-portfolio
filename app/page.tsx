@@ -14,15 +14,15 @@ import {
   databaseTechnologies,
   otherTechnologies,
 } from '@/assets/data'
-
+import logo from '../assets/images/logo.svg'
 import Loader from '@/components/Loader'
 import { GoDotFill } from 'react-icons/go'
+import Image from 'next/image'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate loading delay
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false)
     }, 2000)
@@ -40,9 +40,13 @@ export default function Home() {
 
   return (
     <main className="relative flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5 bg-black-100">
-      <div className="max-w-7xl w-full">
+      <div className="max-w-7xl w-full overflow-hidden">
         {isLoading ? (
-          <div className="flex items-center justify-center h-screen ">
+          <div
+            className={`flex-center h-screen overflow-hidden ${
+              !isLoading && 'hidden'
+            } `}
+          >
             <div
               className="absolute top-0 md:right-0  rounded-lg p-2 text-center"
               id="clock"
@@ -56,12 +60,10 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-gray-600 text-xl mb-4">
-                'The future belongs to those who believe in the beauty of their
-                dreams.'
-                <span className="block">- Eleanor Roosevelt</span>
+              <div className=" flex-center text-5xl mx-5 ">
+                {<Image src={logo} alt="logo" width={500} height={500} />}
               </div>
-              <div className="w-full flex-center">
+              <div className="w-full mt-12 flex-center">
                 <Loader />
               </div>
             </div>
