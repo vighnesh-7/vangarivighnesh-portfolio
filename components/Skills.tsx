@@ -24,7 +24,7 @@ const SkillCategory = ({
     <h3 className="text-xl select-none font-bold text-gray-300 mb-4">
       {category}
     </h3>
-    <div className="grid grid-cols-8 max-sm:grid-cols-4 gap-5">
+    <div className="grid lg:grid-cols-8 sm:grid-cols-5 max-sm:grid-cols-4 max-sm:gap-5 sm:gap-6 lg:gap-5">
       {technologies.map((tech, index) => (
         <div
           key={index}

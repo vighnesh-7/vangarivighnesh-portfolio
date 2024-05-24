@@ -53,7 +53,7 @@ export const backendTechnologies = [
       'https://i.postimg.cc/qRbsfgWk/node-js-logo-F4-F55-CD2-D0-seeklogo-com.png',
   },
   {
-    name: 'Express',
+    name: 'Express.js',
     logoUrl: 'https://i.postimg.cc/dtK8bMxZ/express-js.png',
   },
   {

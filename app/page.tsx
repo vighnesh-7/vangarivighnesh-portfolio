@@ -40,6 +40,19 @@ export default function Home() {
 
   return (
     <main className="relative flex-center flex-col overflow-hidden mx-auto sm:px-10 px-5 bg-black-100">
+      <div
+        className={` ${
+          isLoading && ' hidden'
+        } max-md:hidden  absolute lg:-top-20 md:-top-10 md:contrast-150 lg:contrast-100 left-4 z-[5002] `}
+      >
+        <Image
+          src={logo}
+          alt="logo"
+          className=" top-0 left-0 md:w-40 md:h-40 lg:w-64 lg:h-64"
+          width={300}
+          height={300}
+        />
+      </div>
       <div className="max-w-7xl w-full overflow-hidden">
         {isLoading ? (
           <div
@@ -70,9 +83,6 @@ export default function Home() {
           </div>
         ) : (
           <>
-            <div>
-              {<Image src={logo} alt="logo" width={200} height={200} />}
-            </div>
             <MainNavBar navItems={navItems} />
             <FloatingNav navItems={navItems} />
             <Hero />
