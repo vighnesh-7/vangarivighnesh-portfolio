@@ -70,6 +70,9 @@ export default function Home() {
           </div>
         ) : (
           <>
+            <div>
+              {<Image src={logo} alt="logo" width={200} height={200} />}
+            </div>
             <MainNavBar navItems={navItems} />
             <FloatingNav navItems={navItems} />
             <Hero />

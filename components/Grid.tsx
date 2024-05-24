@@ -17,8 +17,8 @@ const gridItems = [
     title:
       "I'm a passionate second-year IT undergrad at VNRVJIET, constantly enhancing my skills as a web developer.",
     description: '',
-    className: 'lg:col-span-2 md:col-span-3 md:row-span-3',
-    imgClassName: '',
+    className: 'lg:col-span-2 md:col-span-3 md:row-span-4 lg:row-span-3',
+    imgClassName: ' max-md:w-full',
     titleClassName: 'justify-center',
     img: 'https://i.postimg.cc/bNG2Dhwd/image.png',
   },
@@ -27,7 +27,7 @@ const gridItems = [
     title:
       'Unlock the potential of your ideas with a versatile software expert ready to bring them to life!',
     description: '',
-    className: 'md:col-span-2 md:row-span-4',
+    className: 'md:col-span-3 lg:col-span-2 md:row-span-4',
     imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
     titleClassName: 'justify-center md:justify-start lg:justify-center',
     img: '',

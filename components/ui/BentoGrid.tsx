@@ -6,8 +6,9 @@ import Lottie from 'react-lottie'
 import { useState } from 'react'
 import { HoverBorderGradient } from './HeroButton'
 import { IconCopy, IconCopyCheck } from '@tabler/icons-react'
-import { useRouter } from 'next/navigation'
+// import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const BentoGrid = ({
   className,
@@ -47,7 +48,7 @@ export const BentoGridItem = ({
   titleClassName?: string
   spareImg?: string
 }) => {
-  const router = useRouter()
+  // const router = useRouter()
   const [copied, setCopied] = useState<boolean>(false)
   const handleCopy = () => {
     const text = 'vangarivighnesh@gmail.com'
@@ -58,7 +59,7 @@ export const BentoGridItem = ({
       setCopied(false)
     }, 5000)
 
-    router.push('/#about')
+    // router.push('/#about')
   }
 
   return (
@@ -81,14 +82,14 @@ export const BentoGridItem = ({
       <div className={`h-full w-full`}>
         <div
           className={`absolute right-0 h-full -bottom-48 ${
-            id === 5 && 'w-full opacity-85'
+            id === 5 && 'w-full '
           } ${
             id === 1 &&
             'left-0 h-72 max-md:w-72 top-0 -bottom-90 min-h-40 flex-between w-full '
           } ${id === 2 && 'right-0 contrast-125 left-0 -top-8 -bottom-90'}
           ${
             id === 3 &&
-            'right-0 top-0 md:bottom-0 max-md:-top-3 max-md:pb-3 max-md:pt-1'
+            'right-0 top-0 md:bottom-0 max-md:top-3 max-md:pb-3 max-md:pt-1'
           }`}
         >
           {img && id !== 1 && (
@@ -96,11 +97,12 @@ export const BentoGridItem = ({
               loading="lazy"
               src={img}
               alt={img}
-              className={cn(imgClassName, 'object-cover object-center')}
+              className={cn(imgClassName, 'object-cover object-center ')}
             />
           )}
+
           {id == 1 && img && (
-            <div className="grid grid-cols-3 gap-3 group-hover/bento:translate-x-2 transition duration-200 relative">
+            <div className="grid grid-cols-3 gap-3 relative">
               <div className=" relative">
                 <Image
                   src={img}
@@ -113,7 +115,7 @@ export const BentoGridItem = ({
                   )}
                 />
               </div>
-              <div className=" max-md:m-0 max-sm:mt-10 max-sm:ps-5 font-semibold m-5 p-2 sm:px-10 md:px-5 lg:px-10 text-sm md:text-lg w-full z-10 drop-shadow-[0_2.9px_1.5px_rgba(0,0,0,1)] col-span-2">
+              <div className=" group-hover/bento:translate-x-2 transition duration-200 max-md:m-0 max-sm:mt-4 max-sm:ps-5 font-semibold m-5 p-2 sm:px-10 md:px-5 lg:px-10 max-sm:text-base lg:text-lg w-full z-50 drop-shadow-[0_2.9px_1.5px_rgba(0,0,0,1)] col-span-2">
                 {title}
               </div>
             </div>
@@ -139,8 +141,8 @@ export const BentoGridItem = ({
             {description}
           </div>
           <div
-            className={`font-semibold text-sm lg:text-lg w-full z-10 ${
-              id === 5 && 'text-center max-sm:ms-10 max-sm:text-nowrap mx-auto'
+            className={`font-semibold text-base lg:text-lg w-full z-10 ${
+              id === 5 && 'text-center mt-5 max-sm:ms-10  mx-auto'
             } ${id == 2 && 'text-start my-0'}`}
           >
             <p
@@ -175,7 +177,7 @@ export const BentoGridItem = ({
                     onClick={handleCopy}
                     containerClassName="rounded-full"
                     as="button"
-                    className="dark:bg-zinc-900 md:font-semibold bg-white text-black text-xs lg:text-sm text-center dark:text-white select-none flex-center space-x-4"
+                    className=" max-sm:hidden dark:bg-zinc-900 md:font-semibold bg-white text-black text-xs lg:text-sm text-center dark:text-white select-none flex-center space-x-4"
                   >
                     {copied ? (
                       <IconCopyCheck className="w-5 h-5" />
@@ -184,6 +186,16 @@ export const BentoGridItem = ({
                     )}{' '}
                     {copied ? ' Email copied!' : ' Copy my email'}
                   </HoverBorderGradient>
+
+                  <Link href="/#contact" className="sm:hidden">
+                    <HoverBorderGradient
+                      containerClassName="rounded-full"
+                      as="button"
+                      className=" sm:hidden dark:bg-zinc-900 md:font-semibold bg-white text-black text-xs lg:text-sm text-center dark:text-white select-none flex-center space-x-4"
+                    >
+                      Contact Me
+                    </HoverBorderGradient>
+                  </Link>
                 </div>
               </div>
             )}

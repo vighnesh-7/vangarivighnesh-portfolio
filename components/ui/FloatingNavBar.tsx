@@ -56,13 +56,18 @@ export const FloatingNav = ({
     }
   }) => {
     return (
-      <Link href={navItem.link} onClick={() => setVisible(false)}>
+      <Link href={navItem.link}>
         <motion.div
           whileHover={{ x: 5 }}
           transition={{ duration: 0.3 }}
           className="relative dark:text-neutral-50 z-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
         >
-          <span className="sm:block font-semibold text-sm select-none">{navItem.name}</span>
+          <span
+            onClick={() => setVisible(false)}
+            className="sm:block font-semibold text-sm select-none"
+          >
+            {navItem.name}
+          </span>
         </motion.div>
       </Link>
     )
