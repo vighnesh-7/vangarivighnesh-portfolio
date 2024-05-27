@@ -94,7 +94,11 @@ export const HoverCard = ({
                   <AnimatedTooltip items={projectTechStack[idx]} />
                 </div>
                 <div className="flex justify-end text-nowrap font-semibold">
-                  <Link href={item.link} className="flex items-center">
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="flex items-center"
+                  >
                     <motion.div
                       className="flex items-center cursor-pointer select-none"
                       whileHover={{
@@ -106,7 +110,7 @@ export const HoverCard = ({
                     >
                       Live &nbsp; <FaExternalLinkAlt />
                     </motion.div>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </Card>
