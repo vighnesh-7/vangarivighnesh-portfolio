@@ -54,7 +54,7 @@ export const HoverCard = ({
               <CardTitle id={idx} hoveredIndex={hoveredIndex}>
                 {item.title}
               </CardTitle>
-              <div className="relative w-full lg:h-56 max-lg:h-62 sm:h-80 max-sm:h-48 overflow-hidden rounded">
+              <div className="relative w-full max-sm:h-52 sm:h-96 md:h-56 lg:h-48 xl:h-56 overflow-hidden rounded">
                 <AnimatePresence initial={false}>
                   {hoveredIndex === idx ? (
                     <Suspense fallback={<Loader />}>
@@ -64,7 +64,7 @@ export const HoverCard = ({
                         autoPlay
                         loop
                         muted
-                        className="absolute inset-0 object-cover rounded "
+                        className="absolute inset-0 object-cover rounded z-[5004] "
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -79,7 +79,7 @@ export const HoverCard = ({
                       alt={item.title}
                       className={`${
                         hoveredIndex == idx && 'hidden '
-                      }  absolute inset-0 object-cover rounded`}
+                      }  absolute inset-0 object-cover rounded z-[5004]`}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}

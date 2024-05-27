@@ -35,12 +35,12 @@ const gridItems = [
   {
     id: 3,
     title:
-      "Proficient in Java and JavaScript.With a keen interest in hackathons, I'm always eager to push the boundaries of innovation.",
+      "Proficient in Java and JavaScript. With a keen interest in hackathons, I'm always eager to push the boundaries of innovation.",
     description: '',
     className: 'md:col-span-3 md:col-span-3 md:row-span-4 py-4 min-h-20 ',
-    titleClassName: 'justify-start min-h-20 pe-[115px]',
+    titleClassName: 'justify-start min-h-20 pe-[125px] max-sm:mb-1',
     img: 'https://i.postimg.cc/DmkTCLkW/image.png',
-    imgClassName: ' min-h-32 w-32 m-2 max-md:mb-4',
+    imgClassName: ' min-h-32 w-32 m-2 ps-2 max-md:mb-4',
   },
   {
     id: 5,
@@ -48,15 +48,15 @@ const gridItems = [
     description: '',
     className: 'lg:col-span-2 md:col-span-3 md:row-span-4',
     imgClassName: '',
-    titleClassName: 'justify-center md:max-w-full max-w-60 text-center',
+    titleClassName: 'justify-center md:max-w-full text-center  min-h-10 mt-5',
     img: '',
   },
 ]
 
 const Grid = () => {
   return (
-    <section className="" id="about">
-      <BentoGrid>
+    <section className="pt-20" id="about">
+      <BentoGrid className="xl:relative">
         {gridItems.map((item, index) => (
           <BentoGridItem
             id={item.id}

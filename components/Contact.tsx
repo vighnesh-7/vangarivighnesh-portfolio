@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import toast from 'react-hot-toast'
 import { useRouter } from 'next/navigation'
+import { RiMailSendLine } from 'react-icons/ri'
 
 const Contact = () => {
   const formRef = useRef(null)
@@ -119,43 +120,40 @@ const Contact = () => {
             className="flex flex-col items-center justify-center gap-6"
           >
             <div className="w-full">
-              <p className=" indent-2 text-2xl text-gray-300 font-semibold mb-4 select-none">
-                Get In Touch
+              <p className=" indent-2 text-2xl flex items-center justify-start gap-2   font-semibold mb-4 select-none bg-clip-text text-transparent drop-shadow-xl bg-gradient-to-b from-gray-50 to-white/40">
+                Get In Touch{' '}
+                <RiMailSendLine className=" h-7 w-7 text-gray-400" />
               </p>
               <label className="flex flex-col text-start justify-start">
-                <span className="text-gray-300 font-semibold mb-2">
-                  Your Name
-                </span>
+                <span className="text-gray-300 font-bold mb-2">Your Name</span>
                 <input
                   type="text"
                   autoComplete="on"
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="bg-gray-800 font-medium border-b-2 border-indigo-500 py-4 px-6 placeholder:text-gray-400 rounded-lg text-white outline-none transition-colors duration-300 focus:bg-gray-700"
+                  className="bg-gray-800 font-medium border-b-2 border-indigo-500 focus:border-2 focus:border-indigo-600 py-4 px-6 placeholder:text-gray-400 rounded-lg text-white outline-none transition-colors duration-300 focus:bg-gray-700"
                   placeholder="What's your name?"
                 />
               </label>
             </div>
             <div className="w-full">
               <label className="flex flex-col text-start justify-start">
-                <span className="text-gray-300 font-semibold mb-2">
-                  Your Email
-                </span>
+                <span className="text-gray-300 font-bold mb-2">Your Email</span>
                 <input
                   type="email"
                   name="email"
                   autoComplete="on"
                   value={form.email}
                   onChange={handleChange}
-                  className="bg-gray-800 font-medium border-b-2 border-indigo-500 py-4 px-6 placeholder:text-gray-400 rounded-lg text-white outline-none transition-colors duration-300 focus:bg-gray-700"
+                  className="bg-gray-800 font-medium border-b-2 border-indigo-500 focus:border-2 focus:border-indigo-600 py-4 px-6 placeholder:text-gray-400 rounded-lg text-white outline-none transition-colors duration-300 focus:bg-gray-700"
                   placeholder="What's your email?"
                 />
               </label>
             </div>
             <div className="w-full">
               <label className="flex flex-col text-start justify-start">
-                <span className="text-gray-300 font-semibold mb-2">
+                <span className="text-gray-300 font-bold mb-2">
                   Your Message
                 </span>
                 <textarea
@@ -164,7 +162,7 @@ const Contact = () => {
                   value={form.message}
                   autoComplete="on"
                   onChange={handleChange}
-                  className="bg-gray-800 font-medium border-b-2 border-indigo-500 py-4 px-6 placeholder:text-gray-400 rounded-lg text-white outline-none transition-colors duration-300 focus:bg-gray-700 resize-none"
+                  className="bg-gray-800 font-medium border-b-2 border-indigo-500 focus:border-2 focus:border-indigo-600 py-4 px-6 placeholder:text-gray-400 rounded-lg text-white outline-none transition-colors duration-300 focus:bg-gray-700 resize-none"
                   placeholder="What do you want to say?"
                 />
               </label>

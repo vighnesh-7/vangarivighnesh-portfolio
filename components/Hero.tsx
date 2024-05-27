@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <div className="pt-20 pb-40" id="/">
+    <div className="pt-20 pb-30" id="/">
       <div>
         <div className="h-screen w-full dark:bg-gray-950 bg-white dark:bg-grid-white/[0.08] bg-grid-black/[0.08] absolute top-0 left-0 flex items-center justify-center">
           <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
@@ -24,7 +24,7 @@ const Hero = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.2 }}
-                className="absolute top-0 max-sm:left-0 sm:left-2 lg:-left-20 -left-16  text-xl sm:text-2xl text-gray-50 mb-16 select-none"
+                className="absolute top-0 max-sm:left-0 sm:left-2 lg:-left-20 -left-16  text-xl sm:text-2xl text-gray-50 mb-16 select-none flex-center"
               >
                 Hey there 👋,
               </motion.span>

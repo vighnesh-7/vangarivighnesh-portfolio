@@ -6,12 +6,13 @@
     gradientBackgroundStart = "rgb(108, 0, 162)",
     gradientBackgroundEnd = "rgb(0, 17, 82)",
     firstColor = "18, 113, 255",
-    secondColor = "221, 74, 255",
+    secondColor = "163, 24, 191",
     thirdColor = "100, 220, 255",
     fourthColor = "200, 50, 50",
-    fifthColor = "180, 180, 50",
-    pointerColor = "140, 100, 255",
-    size = "80%",
+    fifthColor = "196, 196, 36",
+    sixthColor = "5515,4,5",
+    pointerColor = "85, 52, 175",
+    size = "90%",
     blendingValue = "hard-light",
     children,
     className,
@@ -25,6 +26,7 @@
     thirdColor?: string;
     fourthColor?: string;
     fifthColor?: string;
+    sixthColor?: string;
     pointerColor?: string;
     size?: string;
     blendingValue?: string;
@@ -53,6 +55,7 @@
         document.body.style.setProperty("--third-color", thirdColor);
         document.body.style.setProperty("--fourth-color", fourthColor);
         document.body.style.setProperty("--fifth-color", fifthColor);
+        document.body.style.setProperty("--sixth-color", sixthColor);
         document.body.style.setProperty("--pointer-color", pointerColor);
         document.body.style.setProperty("--size", size);
         document.body.style.setProperty("--blending-value", blendingValue);
@@ -160,6 +163,15 @@
                 `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
                 `[transform-origin:calc(50%-800px)_calc(50%+800px)]`,
                 `animate-fifth`,
+                `opacity-100`
+            )}
+            ></div>
+            <div
+            className={cn(
+                `absolute [background:radial-gradient(circle_at_center,_rgba(var(--sixth-color),_0.8)_0,_rgba(var(--sixth-color),_0)_50%)_no-repeat]`,
+                `[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)] top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]`,
+                `[transform-origin:calc(50%-800px)_calc(50%+800px)]`,
+                `animate-sixth`,
                 `opacity-100`
             )}
             ></div>

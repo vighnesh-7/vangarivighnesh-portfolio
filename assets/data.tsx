@@ -81,13 +81,13 @@ export const databaseTechnologies = [
 
 export const otherTechnologies = [
   {
-    name: 'GitHub',
-    logoUrl: 'https://i.postimg.cc/9XvYpw22/github-6980894-1280.png',
-  },
-  {
     name: 'Git',
     logoUrl:
       'https://i.postimg.cc/DyvyRBnP/01e500fca29c045d432b64f285f9c229.jpg',
+  },
+  {
+    name: 'GitHub',
+    logoUrl: 'https://i.postimg.cc/9XvYpw22/github-6980894-1280.png',
   },
   {
     name: 'ZOD',

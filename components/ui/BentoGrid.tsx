@@ -79,7 +79,11 @@ export const BentoGridItem = ({
           'linear-gradient(73deg, rgba(22,53,125,1) 0%, rgba(11,22,99,1) 36%, rgba(5,14,80,1) 80%)',
       }}
     >
-      <div className={`h-full w-full`}>
+      <div
+        className={`h-full w-full ${
+          id == 5 && 'relative max-sm:block  flex-center '
+        } `}
+      >
         <div
           className={`absolute right-0 h-full -bottom-48 ${
             id === 5 && 'w-full '
@@ -89,7 +93,7 @@ export const BentoGridItem = ({
           } ${id === 2 && 'right-0 contrast-125 left-0 -top-8 -bottom-90'}
           ${
             id === 3 &&
-            'right-0 top-0 md:bottom-0 max-md:top-3 max-md:pb-3 max-md:pt-1'
+            'right-2 sm:top-2 md:top-5 md:bottom-0 max-md:top-3 max-sm:top-5  max-md:pb-3 max-md:pt-1'
           }`}
         >
           {img && id !== 1 && (
@@ -122,7 +126,7 @@ export const BentoGridItem = ({
           )}
         </div>
         {id == 5 && (
-          <div className="relative">
+          <div className="">
             <BackgroundGradientAnimation containerClassName="absolute inset-0 z-0">
               <div className="absolute flex items-center justify-center text-white font-bold pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
             </BackgroundGradientAnimation>
@@ -134,7 +138,7 @@ export const BentoGridItem = ({
             titleClassName,
             `group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-20 flex flex-col p-6 ${
               id === 2 && 'pt-0 pb-20'
-            } ${id === 5 && 'justify-center'}`
+            } ${id === 5 && 'justify-center p-0'}`
           )}
         >
           <div className="font-serif md:max-w-32 text-sm z-10 lg:text-base md:text-xs">
@@ -142,7 +146,7 @@ export const BentoGridItem = ({
           </div>
           <div
             className={`font-semibold text-base lg:text-lg w-full z-10 ${
-              id === 5 && 'text-center mt-5 max-sm:ms-10  mx-auto'
+              id === 5 && 'text-center mt-5 mx-auto'
             } ${id == 2 && 'text-start my-0'}`}
           >
             <p
@@ -172,7 +176,7 @@ export const BentoGridItem = ({
                     }}
                   />
                 </div>
-                <div className="flex items-center justify-center w-full">
+                <div className="flex items-center justify-center w-full pb-10">
                   <HoverBorderGradient
                     onClick={handleCopy}
                     containerClassName="rounded-full"

@@ -112,7 +112,7 @@ const projectsItems = [
       {
         id: 2,
         name: 'JavaScript',
-        image: 'https://i.postimg.cc/MHrL2t1s/image.png',
+        image: 'https://i.postimg.cc/Mpvggj4G/javascript-logo-1.png',
       },
       {
         id: 3,
@@ -141,9 +141,9 @@ const projectsItems = [
 
 const Projects = () => {
   return (
-    <div id="projects" className=" mb-8 mt-8">
+    <div id="projects" className=" mb-8 mt-8 pt-2">
       <div>
-        <h1 className="text-5xl max-sm:text-4xl font-bold text-center select-none mt-20">
+        <h1 className="text-5xl max-sm:text-4xl font-bold text-center select-none mt-20 ">
           Projects 🚀
         </h1>
       </div>

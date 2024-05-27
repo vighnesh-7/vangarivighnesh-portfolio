@@ -61,7 +61,7 @@ const Component = ({
 }) => {
   return (
     <section
-      className="relative flex flex-col items-center justify-center text-white min-h-screen"
+      className="relative flex flex-col items-center justify-center text-white min-h-screen pt-10"
       id="skills"
     >
       <div className="space-y-2 text-center mb-8">
