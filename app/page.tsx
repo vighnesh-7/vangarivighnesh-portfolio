@@ -18,6 +18,7 @@ import logo from '../assets/images/logo.svg'
 import Loader from '@/components/Loader'
 import { GoDotFill } from 'react-icons/go'
 import Image from 'next/image'
+import HamburgerMenu from '@/components/Hamburger'
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -43,12 +44,12 @@ export default function Home() {
       <div
         className={` ${
           isLoading && ' hidden'
-        } max-md:hidden  absolute lg:-top-20 md:-top-10 md:contrast-150 lg:contrast-100 left-4 z-[5002] `}
+        }  absolute max-md:left-1/4 max-md:-top-16 lg:-top-20 md:-top-10 md:contrast-150 lg:contrast-100 left-4 z-[5000] `}
       >
         <Image
           src={logo}
           alt="logo"
-          className=" top-0 left-0 md:w-40 md:h-40 lg:w-64 lg:h-64"
+          className=" top-0 left-0 max-md:w-52 max-md:h-52 md:w-40 md:h-40 lg:w-64 lg:h-64"
           width={300}
           height={300}
         />
@@ -83,7 +84,8 @@ export default function Home() {
           </div>
         ) : (
           <>
-            <MainNavBar navItems={navItems} />
+            <MainNavBar navItems={navItems} className=" max-sm:hidden" />
+            <HamburgerMenu />
             <FloatingNav navItems={navItems} />
             <Hero />
             <Grid />

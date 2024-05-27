@@ -10,7 +10,8 @@ const gridItems = [
     className: 'lg:col-span-3 md:col-span-6 md:row-span-7  ',
     titleClassName: 'justify-end',
     img: 'https://i.postimg.cc/hvGkps5P/image.png',
-    imgClassName: ' rounded-lg m-8 max-sm:m-4 md:ms-0 mb-0  w-32 h-32 ',
+    imgClassName:
+      ' rounded-lg m-8 max-sm:mx-4 max-sm:my-1 sm:ms-0 mb-0  w-32 h-32 ',
   },
   {
     id: 2,

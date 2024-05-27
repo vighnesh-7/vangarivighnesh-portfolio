@@ -96,7 +96,7 @@ export const HoverCard = ({
                 <div className="flex justify-end text-nowrap font-semibold">
                   <Link href={item.link} className="flex items-center">
                     <motion.div
-                      className="flex items-center cursor-pointer"
+                      className="flex items-center cursor-pointer select-none"
                       whileHover={{
                         scale: 1.1,
                         rotate: 0,
@@ -201,7 +201,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        'lg:mt-5 md:mt-2 mt-2 indent-9 text-zinc-200 max-sm:text-sm mb-8  tracking-wide leading-8 text-sm font-[480] text-left break-words',
+        'lg:mt-5 md:mt-2 mt-2 indent-9 max-sm:indent-11 text-zinc-200 max-sm:text-sm mb-8  tracking-wide leading-8 text-sm font-[480] text-left break-words max-sm:select-none',
         className
       )}
     >

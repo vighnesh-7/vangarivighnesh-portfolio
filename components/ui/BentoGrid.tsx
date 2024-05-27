@@ -80,17 +80,20 @@ export const BentoGridItem = ({
       }}
     >
       <div
-        className={`h-full w-full ${
-          id == 5 && 'relative max-sm:block  flex-center '
-        } `}
+        className={`h-full w-full
+        ${id === 2 && 'max-lg:h-40'}
+        ${id == 5 && 'relative max-sm:block  flex-center '} `}
       >
         <div
-          className={`absolute right-0 h-full -bottom-48 ${
+          className={`absolute right-0  h-full -bottom-48 ${
             id === 5 && 'w-full '
           } ${
             id === 1 &&
-            'left-0 h-72 max-md:w-72 top-0 -bottom-90 min-h-40 flex-between w-full '
-          } ${id === 2 && 'right-0 contrast-125 left-0 -top-8 -bottom-90'}
+            'left-0 h-72 max-md:w-full top-0 -bottom-90 min-h-40 flex-between w-full '
+          } ${
+            id === 2 &&
+            'right-0 contrast-125 left-0 max-sm:top-0 sm:-top-28 md:-top-6 lg:-top-2 xl:-top-8 -bottom-90'
+          }
           ${
             id === 3 &&
             'right-2 sm:top-2 md:top-5 md:bottom-0 max-md:top-3 max-sm:top-5  max-md:pb-3 max-md:pt-1'
@@ -106,7 +109,7 @@ export const BentoGridItem = ({
           )}
 
           {id == 1 && img && (
-            <div className="grid grid-cols-3 gap-3 relative">
+            <div className="grid grid-cols-3 gap-3 relative max-md:w-full">
               <div className=" relative">
                 <Image
                   src={img}
@@ -115,11 +118,11 @@ export const BentoGridItem = ({
                   width={500}
                   className={cn(
                     imgClassName,
-                    'object-cover object-center col-span-1 ss:py-20 lg:p-0  md:absolute lg:h-80 lg:w-80 -top-10 lg:-top-36 lg:left-0 '
+                    'object-cover object-center col-span-1 lg:p-0  sm:absolute sm:-top-20 sm:left-0 md:-top-16 lg:-bottom-10 sm:h-44 sm:w-40 md:w-44 lg:h-96 lg:w-96 -top-10 lg:-top-36 lg:left-0 max-xl:bottom-0 max-xl:-top-14 '
                   )}
                 />
               </div>
-              <div className=" group-hover/bento:translate-x-2 transition duration-200 max-md:m-0 max-sm:mt-4 max-sm:ps-5 font-semibold m-5 p-2 sm:px-10 md:px-5 lg:px-10 max-sm:text-base lg:text-lg w-full z-50 drop-shadow-[0_2.9px_1.5px_rgba(0,0,0,1)] col-span-2">
+              <div className=" group-hover/bento:translate-x-2 transition duration-200 max-md:m-0 max-sm:mt-4 max-sm:ps-5 font-semibold m-5 ms-0 p-2 sm:px-10 md:px-5 md:ps-0 lg:px-10 lg:ps-2 max-sm:text-base lg:text-lg w-full z-50 drop-shadow-[0_2.9px_1.5px_rgba(0,0,0,1)] col-span-2">
                 {title}
               </div>
             </div>
@@ -176,12 +179,12 @@ export const BentoGridItem = ({
                     }}
                   />
                 </div>
-                <div className="flex items-center justify-center w-full pb-10">
+                <div className=" flex-center w-full pb-10 gap-40  max-sm:hidden">
                   <HoverBorderGradient
                     onClick={handleCopy}
                     containerClassName="rounded-full"
                     as="button"
-                    className=" max-sm:hidden dark:bg-zinc-900 md:font-semibold bg-white text-black text-xs lg:text-sm text-center dark:text-white select-none flex-center space-x-4"
+                    className=" dark:bg-zinc-900 md:font-semibold bg-white text-black text-xs lg:text-sm text-center dark:text-white select-none flex-center space-x-4"
                   >
                     {copied ? (
                       <IconCopyCheck className="w-5 h-5" />
@@ -190,14 +193,15 @@ export const BentoGridItem = ({
                     )}{' '}
                     {copied ? ' Email copied!' : ' Copy my email'}
                   </HoverBorderGradient>
-
+                </div>
+                <div className=" flex-center w-full pb-10 gap-40 sm:hidden">
                   <Link href="/#contact" className="sm:hidden">
                     <HoverBorderGradient
                       containerClassName="rounded-full"
                       as="button"
                       className=" sm:hidden dark:bg-zinc-900 md:font-semibold bg-white text-black text-xs lg:text-sm text-center dark:text-white select-none flex-center space-x-4"
                     >
-                      Contact Me
+                      <span>Contact Me</span>
                     </HoverBorderGradient>
                   </Link>
                 </div>
