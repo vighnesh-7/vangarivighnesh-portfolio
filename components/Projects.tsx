@@ -6,10 +6,10 @@ import p3 from '../assets/projects/p3.mp4'
 
 const projectsItems = [
   {
-    title: 'LMS-VNRVJIET',
+    title: 'Tutly',
     description:
       'Led the creation of an exclusive LMS platform for our college, overseeing 400 juniors and implementing innovative website functionalities to address the complex challenges faced by students, mentors, and instructors.',
-    link: 'https://lms-vnrvjiet.vercel.app/',
+    link: 'https://learn.tutly.in/',
     techStack: [
       {
         id: 1,

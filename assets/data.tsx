@@ -42,7 +42,6 @@ export const frontendTechnologies = [
   {
     name: 'Next.js',
     logoUrl: 'https://i.postimg.cc/Qty8ZrmL/image.png',
-    // 'https://logowik.com/content/uploads/images/nextjs7685.logowik.com.webp',
   },
 ]
 
@@ -77,6 +76,10 @@ export const databaseTechnologies = [
     name: 'MySQL',
     logoUrl: 'https://i.postimg.cc/Dz7pnJps/mysqlworkbench-93532.png',
   },
+  {
+    name: 'Vercel Blob',
+    logoUrl: 'https://i.postimg.cc/rpzbWKvN/image.png',
+  },
 ]
 
 export const otherTechnologies = [
@@ -94,8 +97,8 @@ export const otherTechnologies = [
     logoUrl: 'https://i.postimg.cc/T3Q2RmYv/G43b-ODfo-400x400.jpg',
   },
   {
-    name: 'Hostinger',
-    logoUrl: 'https://i.postimg.cc/9MLN0mwM/image.png',
+    name: 'Vercel',
+    logoUrl: 'https://i.postimg.cc/X70ThNCn/image.png',
   },
   {
     name: 'Java',
