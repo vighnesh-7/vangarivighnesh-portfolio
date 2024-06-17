@@ -178,7 +178,7 @@ const projectsItems = [
       // },
     ],
     image: 'https://i.postimg.cc/GhcV4jKN/image.png',
-    video: 'https://i.postimg.cc/GhcV4jKN/image.png',
+    video: '',
   },
 ]
 

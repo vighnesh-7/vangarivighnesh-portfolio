@@ -56,20 +56,22 @@ export const HoverCard = ({
               <div className="relative w-full max-sm:h-52 sm:h-96 md:h-56 lg:h-48 xl:h-56 overflow-hidden rounded">
                 <AnimatePresence initial={false}>
                   {hoveredIndex === idx ? (
-                    <Suspense fallback={<Loader />}>
-                      <motion.video
-                        key="video"
-                        src={item.video}
-                        autoPlay
-                        loop
-                        muted
-                        className="absolute inset-0 object-cover rounded z-[5004] "
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                      />
-                    </Suspense>
+                    item.video !== '' && (
+                      <Suspense fallback={<Loader />}>
+                        <motion.video
+                          key="video"
+                          src={item.video}
+                          autoPlay
+                          loop
+                          muted
+                          className="absolute inset-0 object-cover rounded z-[5004] "
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.5 }}
+                        />
+                      </Suspense>
+                    )
                   ) : (
                     <motion.img
                       key="image"
