@@ -129,14 +129,57 @@ const projectsItems = [
     image: 'https://i.postimg.cc/FHhVqkRJ/p3.png',
     video: p3,
   },
-  // {
-  //   title: 'Project 4',
-  //   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley 4',
-  //   link: 'https://example.com',
-  //   techStack: [{ id: 1, name: 'NextJS' }, { id: 2, name: 'TypeScript' }],
-  //   image: 'https://via.placeholder.com/300',
-  // video: '../../assets/projects/p1.mp4',
-  // },
+  {
+    title: 'Mindly',
+    description:
+      'A gamified learning platform where users can explore topics like web development in an interactive way. As users progress through levels, they earn diamonds as score, adding a sense of achievement and making the learning experience more engaging.',
+    link: 'https://mindly-ai.vercel.app/',
+    techStack: [
+      {
+        id: 1,
+        name: 'NextJS',
+        image: 'https://i.postimg.cc/rw3Gx39y/download.png',
+      },
+      {
+        id: 2,
+        name: 'TypeScript',
+        image: 'https://i.postimg.cc/jSf5LF3r/image.png',
+      },
+      {
+        id: 3,
+        name: 'TailwindCSS',
+        image: 'https://i.postimg.cc/yNYrdwnf/download-2.png',
+      },
+      {
+        id: 4,
+        name: 'PostgreSQL',
+        image:
+          'https://i.postimg.cc/NMxhV1NV/993px-Postgresql-elephant-svg.png',
+      },
+      {
+        id: 5,
+        name: 'Prisma ORM',
+        image: 'https://i.postimg.cc/jqNnWCD1/image.jpg',
+      },
+      {
+        id: 6,
+        name: 'Gemini Ai',
+        image: 'https://i.postimg.cc/631p2SKW/image.png',
+      },
+      {
+        id: 7,
+        name: 'TensorFlow',
+        image: 'https://i.postimg.cc/jSrkN4RP/image.png',
+      },
+      // {
+      //   id: 8,
+      //   name: 'RazorPay',
+      //   image: 'https://i.postimg.cc/85TWNSH5/id1f-W5-Etd-E.jpg',
+      // },
+    ],
+    image: 'https://i.postimg.cc/GhcV4jKN/image.png',
+    video: 'https://i.postimg.cc/GhcV4jKN/image.png',
+  },
 ]
 
 const Projects = () => {
