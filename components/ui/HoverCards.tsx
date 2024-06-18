@@ -40,7 +40,7 @@ export const HoverCard = ({
           key={idx}
           className="relative group block p-4 bg-gradient-to-br from-indigo-900 to-cyan-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
           onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
+          onMouseLeave={() => setHoveredIndex(-1)}
         >
           <div
             className={`rounded-xl z-50 min-h-52 ${
@@ -56,7 +56,7 @@ export const HoverCard = ({
               <div className="relative w-full max-sm:h-52 sm:h-96 md:h-56 lg:h-48 xl:h-56 overflow-hidden rounded">
                 <AnimatePresence initial={false}>
                   {hoveredIndex === idx ? (
-                    item.video !== '' && (
+                    item.video !== '' ? (
                       <Suspense fallback={<Loader />}>
                         <motion.video
                           key="video"
@@ -71,6 +71,20 @@ export const HoverCard = ({
                           transition={{ duration: 0.5 }}
                         />
                       </Suspense>
+                    )
+                    : (
+                      <div className={ `absolute inset-0 flex items-center justify-center bg-black/80 z-[5005] ${ hoveredIndex !== idx && 'hidden' } `}>
+                        <span className={` text-white  ${ hoveredIndex !== idx && 'hidden' } `}>Preview not available</span>
+                        <img
+                      key="image"
+                      loading="lazy"
+                      src={item.image}
+                      alt={item.title}
+                      className={`${
+                        hoveredIndex === idx && 'hidden'
+                      }  absolute inset-0 object-cover rounded z-[5004]`}
+                    />
+                      </div>
                     )
                   ) : (
                     <motion.img
