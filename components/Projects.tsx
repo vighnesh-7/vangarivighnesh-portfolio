@@ -8,7 +8,7 @@ const projectsItems = [
   {
     title: 'Tutly',
     description:
-      'Led the creation of an exclusive LMS platform for our college, overseeing 400 juniors and implementing innovative website functionalities to address the complex challenges faced by students, mentors, and instructors.',
+      'Led the creation of an exclusive LMS platform for our college, overseeing 400+ juniors and implementing innovative website functionalities to address the complex challenges faced by students, mentors, and instructors.',
     link: 'https://learn.tutly.in/',
     techStack: [
       {
@@ -186,8 +186,11 @@ const Projects = () => {
   return (
     <div id="projects" className=" mb-8 mt-8 pt-2">
       <div>
-        <h1 className="text-5xl max-sm:text-4xl font-bold text-center select-none mt-20 ">
-          Projects 🚀
+        <h1 className="text-5xl max-sm:text-4xl font-bold text-center select-none mt-20  ">
+          <span className="p-1 bg-clip-text text-transparent drop-shadow-xl bg-gradient-to-b from-gray-50 to-white/30">
+            Projects
+          </span>
+          🚀
         </h1>
       </div>
       <HoverCard items={projectsItems}></HoverCard>

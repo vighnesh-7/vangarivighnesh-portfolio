@@ -65,7 +65,7 @@ const Component = ({
       id="skills"
     >
       <div className="space-y-2 text-center mb-8">
-        <h1 className="text-5xl  max-sm:text-4xl select-none font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-300">
+        <h1 className="text-5xl  max-sm:text-4xl select-none font-bold sm:text-4xl md:text-5xl p-1 bg-clip-text text-transparent drop-shadow-xl bg-gradient-to-b from-gray-50 to-white/20">
           My Skills
         </h1>
         <p className="max-w-[700px] text-gray-400 md:text-xl/relaxed select-none lg:text-base/relaxed xl:text-xl/relaxed">

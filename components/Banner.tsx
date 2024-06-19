@@ -16,7 +16,7 @@ export default function Component() {
           whileHover={{ scale: 1.3, rotate: -10 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-          <BsPersonLinesFill className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6" />
+          <BsPersonLinesFill className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6 hover:text-gray-400 hover:scale-125 transition ease-in-out duration-200 delay-150 " />
         </motion.a>
         <motion.a
           className="block text-white my-2"
@@ -25,7 +25,7 @@ export default function Component() {
           whileHover={{ scale: 1.3, rotate: 10 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-          <FaGithub className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6" />
+          <FaGithub className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6 hover:bg-gray-300 rounded-full hover:text-black hover:scale-125 transition ease-in-out duration-200 delay-150" />
         </motion.a>
         <motion.a
           className="block text-white my-2"
@@ -33,7 +33,7 @@ export default function Component() {
           whileHover={{ scale: 1.3, rotate: -10 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-          <FaLinkedin className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6" />
+          <FaLinkedin className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6 hover:text-blue-500 hover:scale-125 transition ease-in-out duration-200 delay-150" />
         </motion.a>
         <motion.a
           className="block text-white my-2"
@@ -41,7 +41,7 @@ export default function Component() {
           href="https://leetcode.com/u/vighnesh_7/"
           transition={{ duration: 0.3, ease: 'easeInOut' }}
         >
-          <SiLeetcode className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6" />
+          <SiLeetcode className="h-7 w-7 my-2 max-sm:h-6 max-sm:w-6 hover:text-orange-500 hover:scale-125 transition ease-in-out duration-200 delay-150" />
         </motion.a>
         <motion.a
           className="block text-white my-2"

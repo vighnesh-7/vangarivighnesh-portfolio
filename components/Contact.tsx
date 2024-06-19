@@ -93,7 +93,7 @@ const Contact = () => {
       id="contact"
     >
       <div className="text-center">
-        <h2 className="text-5xl  max-sm:text-4xl font-bold mt-0 mb-4 select-none">
+        <h2 className="text-5xl  max-sm:text-4xl font-bold mt-0 mb-4 select-none bg-clip-text text-transparent drop-shadow-xl bg-gradient-to-b from-gray-50 to-white/30 ">
           Contact
         </h2>
       </div>
@@ -120,9 +120,8 @@ const Contact = () => {
             className="flex flex-col items-center justify-center gap-6"
           >
             <div className="w-full">
-              <p className=" indent-2 text-2xl flex items-center justify-start gap-2   font-semibold mb-4 select-none bg-clip-text text-transparent drop-shadow-xl bg-gradient-to-b from-gray-50 to-white/40">
-                Get In Touch{' '}
-                <RiMailSendLine className=" h-7 w-7 text-gray-400" />
+              <p className=" indent-2 text-2xl flex items-center justify-start gap-2 font-semibold mb-4 select-none text-white">
+                Get In Touch <RiMailSendLine className=" h-7 w-7" />
               </p>
               <label className="flex flex-col text-start justify-start">
                 <span className="text-gray-300 font-bold mb-2">Your Name</span>
